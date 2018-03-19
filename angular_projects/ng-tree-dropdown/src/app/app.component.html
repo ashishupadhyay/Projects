@@ -1,0 +1,21 @@
+<tree-dropdown [treeData]="treeData" (selectedData)="onDataSelection($event)"></tree-dropdown>
+
+<div class="container-fluid">
+    <table class="table table-bordered table-sm">
+        <caption>Selected Data from the dropdown</caption>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Child Orgs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of selectedOrgs">
+                <th scope="row">{{data.id}}</th>
+                <th scope="row">{{data.name}}</th>
+                <th scope="row">{{data.childData | json}}</th>                
+            </tr>
+        </tbody>
+    </table>
+</div>

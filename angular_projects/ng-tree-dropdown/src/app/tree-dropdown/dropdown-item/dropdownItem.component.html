@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox_{{dropdownData.id}}" 
+            value="{{dropdownData.name}}" (change)="onCheckboxClick(dropdownData, $event)">
+        <label class="form-check-label" for="inlineCheckbox_{{dropdownData.id}}">{{dropdownData.name}}</label>
+    </div>
+    <div class="container-fluid" *ngIf="dropdownData.childData.length > 0">
+        <dropdown-item [dropdownData]="child" *ngFor="let child of dropdownData.childData" 
+            (selectedData)="onDataSelection($event)"></dropdown-item>
+    </div>
+</div>
