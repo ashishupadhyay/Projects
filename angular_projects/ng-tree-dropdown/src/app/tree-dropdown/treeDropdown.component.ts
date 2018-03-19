@@ -11,7 +11,7 @@ export class TreeDropdownComponent implements OnInit {
     @Input() treeData: Array<any>;
     @Output() selectedData: EventEmitter<any> = new EventEmitter<any>();
 
-    selectedOrgs: Array<any> = new Array<any>();
+    selectedDataObject: Array<any> = new Array<any>();
 
     ngOnInit() {
 
@@ -20,16 +20,16 @@ export class TreeDropdownComponent implements OnInit {
     onDataSelection(org: any) {
 
         if(org.checked) {
-            this.selectedOrgs.push(org.org);
+            this.selectedDataObject.push(org.org);
         } else {
 
-            var index: number = this.selectedOrgs.length - 1;
+            var index: number = this.selectedDataObject.length - 1;
 
             while(index >= 0) {
 
-                if(this.selectedOrgs[index].id == org.org.id) {
+                if(this.selectedDataObject[index].id == org.org.id) {
 
-                    this.selectedOrgs.splice(index, 1);
+                    this.selectedDataObject.splice(index, 1);
                     break;
                 }
 
@@ -37,8 +37,8 @@ export class TreeDropdownComponent implements OnInit {
             }
         }
 
-        console.log(this.selectedOrgs);
+        console.log(this.selectedDataObject);
         
-        this.selectedData.emit(this.selectedOrgs)
+        this.selectedData.emit(this.selectedDataObject)
     }
 }

@@ -1,7 +1,7 @@
 <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
-        {{ selectedOrgs.length > 0 ? (selectedOrgs.length + ' selected') : 'Select Data'}}
+        {{ selectedDataObject.length > 0 ? (selectedDataObject.length + ' selected') : 'Select Data'}}
     </button>
     <div class="dropdown-menu dropdown-scroll" aria-labelledby="dropdownMenuButton">
        <dropdown-item [dropdownData]="data" *ngFor="let data of treeData" click-stop-propagation 

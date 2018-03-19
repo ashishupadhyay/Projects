@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   
   treeData: Array<any>;
-  selectedOrgs: Array<any> = new Array<any>();
+  dropdownSelectedData: Array<any> = new Array<any>();
 
   ngOnInit() {
 
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
 
   onDataSelection(data: any) {
 
-    this.selectedOrgs = data;
+    this.dropdownSelectedData = data;
 
   }
 

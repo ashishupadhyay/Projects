@@ -2,6 +2,8 @@
 
 Bootstrap(v4) Dropdown to show items in tree hierarchy
 
+[DEMO] (https://plnkr.co/edit/iPw0cO?p=preview)
+
 # How to Use
 
 **Step 1:** Install ng-tree-dropdown 
@@ -45,7 +47,7 @@ import { OnInit } from "@angular/core";
 export class AppComponent  implements OnInit{
     
   treeData: Array<any>;
-  selectedData: Array<any> = new Array<any>();
+  dropdownSelectedData: Array<any> = new Array<any>();
 
   ngOnInit() {
 
@@ -73,7 +75,7 @@ export class AppComponent  implements OnInit{
 
   onDataSelection(data: any) {
 
-    this.selectedData = data;
+    this.dropdownSelectedData = data;
 
   }
 
