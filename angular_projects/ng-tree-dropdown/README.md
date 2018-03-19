@@ -1,4 +1,4 @@
-# Tree Dropdown for Angular 2 and above
+# Tree Dropdown for Angular 2 and above (Bootstrap v4 dropdown)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
 
